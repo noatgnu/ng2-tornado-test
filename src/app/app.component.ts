@@ -18,4 +18,7 @@ export class AppComponent {
     console.log(this.hide_reg);
     this.hide_reg = !this.hide_reg;
   }
+  clickReg() {
+    this.hide_reg = !this.hide_reg;
+  }
 }

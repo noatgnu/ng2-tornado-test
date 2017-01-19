@@ -12,5 +12,7 @@ export class RegistrationComponent {
   @Input() xsrf_token: string;
   @Input() r_signal: any;
   model = new User(0, "", "", "");
-  
+  onSubmit(f: NgForm) {
+    console.log(f.value);
+  }
 }
