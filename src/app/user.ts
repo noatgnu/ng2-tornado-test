@@ -12,5 +12,6 @@ export class User {
     public _id: Number,
     public _username: string,
     public _xsrf: string,
+    public _email: string
   ) { }
 }

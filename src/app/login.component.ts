@@ -1,5 +1,5 @@
 import { NgForm } from '@angular/forms';
-import { Input, Component } from '@angular/core';
+import { Output, Input, Component, EventEmitter } from '@angular/core';
 import { UserLogin } from './user';
 
 @Component ({
@@ -10,9 +10,14 @@ import { UserLogin } from './user';
 
 export class UserLoginComponent {
   @Input() xsrf_token: string;
+  @Output() r_signal = new EventEmitter();
   model = new UserLogin("", "", "", "");
   submitted = false;
   onSubmit(f: NgForm) {
     console.log(f.value)
   }
+  clickReg() {
+    this.r_signal.emit("reg");
+    console.log("send");
+  };
 }

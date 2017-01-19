@@ -1,0 +1,29 @@
+<div class="row justify-content-md-center">
+  <div [ngbCollapse]="!r_signal" class="col-9 col-md-6 col-sm-3">
+    <div class="card">
+      <div class="card-block">    
+        <h4 class="card-title">
+        Registration
+        </h4>
+        <form>
+          <div class="form-group">
+              <label for="username_r">Username:</label>
+              <input class="form-control" [(ngModel)]="model._username" name="_username" type="text" id="username_r">
+          </div>
+          <div class="form-group">
+              <label for="password_r">Password:</label>
+              <input class="form-control" [(ngModel)]="model._password" name="_password" type="password" id="password_r">
+          </div>
+          <div class="form-group">
+              <label for="email_r">Email:</label>
+              <input class="form-control" [(ngModel)]="model._email" name="_email" type="email" id="email_r">
+          </div>
+          <div class="form-group">
+            <input class="form-control" [(ngModel)]="xsrf_token" name="_xsrf" id="xsrf" hidden required>
+          </div>
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
