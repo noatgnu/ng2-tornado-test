@@ -1,25 +1,27 @@
 <div [hidden]="submitted">
   <form (ngSubmit)="onSubmit(userLoginForm)" class="form-inline my-2 my-lg-0" #userLoginForm="ngForm">
-    <div class="input-group-sm mt-2">
+    <div class="input-group-sm">
       <input class="form-control mr-sm-2" type="text" [(ngModel)]="model._username" name="_username" id="username" placeholder="Username" required>    
     </div>
     
-    <div class="input-group-sm mt-2">
+    <div class="input-group-sm">
       <input class="form-control mr-sm-2" type="password" [(ngModel)]="model._password" name="_password" id="password" placeholder="Password">
     </div>
-    <div class="input-group form-check mt-2 mb-2 mr-sm-2 mb-sm-0">
-      <button class="btn btn-nav btn-outline-success btn-sm">
-      <label class="form-check-label">
+    <div class="input-group form-check mb-2 mr-sm-2 mb-sm-0">
+      
+      <label class="form-check-label text-info">
+        <div class="text-white">
         <input class="form-check-input" type="checkbox" [(ngModel)]="model._remember" name="_remember" id="remember">
         Remember
+        </div>
       </label>
-      </button>
+
     </div>
     <div class="input-group">
       <input class="form-control" [(ngModel)]="xsrf_token" name="_xsrf" id="xsrf" hidden required>
     </div>
     <div class="input-group mt-2">
-      <button class="btn btn-nav btn-primary btn-sm  mr-2 mr-sm-2 my-sm-0" type="submit">Submit</button>
+      <button class="btn btn-nav btn-primary btn-sm mt-2 mr-2 mr-sm-2 my-sm-0" type="submit">Submit</button>
     </div>
     <!--
     <div class="input-group mt-2">
